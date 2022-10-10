@@ -1,35 +1,93 @@
-# RPS Challenge
+Rock Paper Sciccor Game
+===================
 
+About the Project:
+-----------
 
-## UserStories and Domain models
+- This is BackEnd Project
+- Used Views for having a mock FrontEnd
+
+Build With:
+---------
+
+### Languages
+- JavaScript
+- EJS
+- CSS
+
+### IDE
+- Visual Studio Code
+
+Getting Started:
+----------
+
+Steps to follow in order to run this project locally on your machine
+
+1. Clone the repo
+
+    You can copy project link from *green* button named as **Code**, link should be like this
+    ```
+    git clone http://github.com/your-username/Project-name.git
+    ```
+2. Install dependencies
+
+    You can install them by writing this command in terminal or by right clicking on **Package.json** file and selecting *Install dependencies* of both folders
+    ```
+    npm install
+    ```
+3. Run servers
+
+    Open integrated terminal from **Package.json** file and apply command
+    ```
+    npm start
+    ```
+4. Open in Browser
+  
+    Press `ctrl` key and click on server link from terminal to open project in browser
+    
+
+5. Test
+
+    You can run tests by opening integrated terminal from **Package.json** file and running this command in terminal
+    ```
+    npm test
+    ```
+
+Problem Statements:
+----------------
+
+### Problem
+  ```
+  The DFA team ( **DFAT** ) have asked you to provide a game for them. The daily grind is pretty tough and they need time to have a little fun.
+Your task is to provide a _Rock, Paper, Scissors_ game for them so they can play on the web
 ```
--might have cleaned server.js file by making some methods and calling them (if its possible and had time).
--added public folder to use css file in ejs files.
--have used if-else statements because wasn't possible to return in turnery ,also wanted to make sure each statement should always check condition before returning result
-```
+
+### User Stories
+
+1.
 ```
 As a DFAT member
 So that I can see my name
 I would like to register my name before playing an online game
 ```
+Domain model
 
-```
 |Object        |Properties    |Messages      |Output         |
 |--------------|--------------|--------------|---------------|
 |Player        |name@String   |              |               |
-```
 
 
+2.
 ```
 As a DFAT member
 So that I can enjoy myself away from the daily grind
 I would like to be able to play rock/paper/scissors
 ```
-### for single player
+Domain model for single player
 
 ```
 changed name from RPSGame to SinglePlayerGame and domain model after extended criteria. made all blocked variables into class variables so they are available everywhere in class without passing the in blocks
-
+```
 |Object                 |Properties                 |Messages                       |Output         |
 |-----------------------|---------------------------|-------------------------------|---------------|
 |SinglePlayerGame       |player1@Object             |setSinglePlayerGame(@player)   |               |
@@ -40,9 +98,10 @@ changed name from RPSGame to SinglePlayerGame and domain model after extended cr
 |                       |player1Choice@String       |case0()                        |(message)      |
 |                       |                           |case1()                        |(message)      |
 |                       |                           |case2()                        |(message)      |
-```
-### for two Players
-```
+
+
+Domain model for two Players
+
 |Object              |Properties              |Messages                       |Output         |
 |--------------------|------------------------|-------------------------------|---------------|
 |TwoPlayerGame       |playerArray[@objects]   |setTwoPlayerGame(@players)     |               |
@@ -53,11 +112,13 @@ changed name from RPSGame to SinglePlayerGame and domain model after extended cr
 |                    |                        |twoPlayerCase0(ch2,pl1,pl2)    |player(name)   |
 |                    |                        |twoPlayerCase1(ch2,pl1,pl2)    |player(name)   |
 |                    |                        |twoPlayerCase2(ch2,pl1,pl2)    |player(name)   |
-```
-### for extended(Rock, Paper, Scissors, Spock, Lizard) single player 
+
+Extended(Rock, Paper, Scissors, Spock, Lizard) single player 
 ```
 created separate classes for extended games as rules for extended game have some extra conditions, first tried to make a boolean to check if game is extended or normal and implement logic n basis of that boolean but couldn't think how to implement it. made all blocked variables into class variables so they are available everywhere in class without passing the in blocks
+```
 
+Domain model
 |Object                 |Properties                  |Messages                           |Output         |
 |-----------------------|----------------------------|-----------------------------------|---------------|
 |ExtendedSingle         |player1@Object              |setExtendedOnePlayerGame(@player)  |               |
@@ -71,11 +132,11 @@ created separate classes for extended games as rules for extended game have some
 |                       |                            |case3()                            |(message)      |
 |                       |                            |case4()                            |(message)      |
 
-```
 
-### for extended(Rock, Paper, Scissors, Spock, Lizard) Two players 
+Extended(Rock, Paper, Scissors, Spock, Lizard) Two players 
 
-```
+Domain model
+
 |Object              |Properties              |Messages                              |Output         |
 |--------------------|------------------------|--------------------------------------|---------------|
 |ExtendedTwoPlayer   |playerArray[@objects]   |setExtendedTwoPlayerGame(@players)    |               |
@@ -89,14 +150,12 @@ created separate classes for extended games as rules for extended game have some
 |                    |                        |twoPlayerCase3(ch2,pl1,pl2)           |player(name)   |
 |                    |                        |twoPlayerCase4(ch2,pl1,pl2)           |player(name)   |
 
-```
-### Test
-```
-*** did try to use beforeEach but for some reasons it wasn't working as expected***
-All tests are in test folder
-First i made separate test file for each js file but because most of them just had one or two tests for routes so i made them together in one file for each game type with different test suite for each file
-some of tests from singlePlayerGameClassTests and ExtendedSingleClass were working before but when i made all blocked variables as class variables they stopped working because before i was passing them in as argument but now these variables were calculated on basis of values calculated from block of codes
-```
+Project Review:
+------------
+
+- Could have tested EJS pages
+- Could have provided more functionality of game
+- Would like to make it full stack application
 
 
 
