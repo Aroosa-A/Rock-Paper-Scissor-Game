@@ -4,6 +4,8 @@ Rock Paper Sciccor Game
 About the Project:
 -----------
 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=1000&background=000000&vCenter=true&multiline=true&width=600&height=300&lines=%3Chead%3E;%3Ctitle%3EGame%3C%2Ftitle%3E;%3C%2Fhead%3E;%3Cbody%3E;+%3Cdiv+id%3D%22main%22%3E;%3C%2Fbody%3E;class+ExtendedSingle+%7B;decideWinner()+%7B;%7D)](https://git.io/typing-svg)
+
 - This is BackEnd Project
 - Used Views for having a mock FrontEnd
 
